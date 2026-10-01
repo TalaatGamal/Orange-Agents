@@ -161,30 +161,36 @@ header .img{
     align-items: center;
     justify-content: center;
     gap: 20px;
+
+   background-color: white;
+   padding: 5px;
+   border-radius: 50px;
+   padding: 5px 20px 5px 20px;
  }
- .v-1 .img{
+ .go-1 .img{
     width: 40px;
     height: 40px;
     background-image: url(https://cdn-icons-png.flaticon.com/128/14149/14149253.png);
     background-position: center;
     background-size: cover;
  }
- .v-2 .img{
+ .go-2 .img{
     width: 40px;
     height: 40px;
     background-image: url(https://cdn-icons-png.flaticon.com/128/5606/5606472.png);
     background-position: center;
     background-size: cover;
+    display: block;
  }
  .video{
     width: 100%;
-    height: 300px;
+    height: 280px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     margin-top: 10px;
     border: #d4000081 solid 2px;
-    border-radius: 20px;
+    border-radius: 40px;
     margin-bottom: 50px;
     box-shadow: #4b4b4b49 10px 10px 5px 0px;
     background-image: url(https://scontent.fcai19-12.fna.fbcdn.net/v/t39.30808-6/531593324_700817079625299_4419968111286588574_n.jpg?stp=dst-jpg_tt6&cstp=mx1600x872&ctp=s1600x872&_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=2DU96TKZwCUQ7kNvwHavnHh&_nc_oc=AdolheoFkfd3O-1OjSbOHZvgYyVt1jtWlbtouv7SyJ7kQGvowt5RFYoQY7pi-_XCaV8&_nc_zt=23&_nc_ht=scontent.fcai19-12.fna&_nc_gid=3ITfJXDxL-0bvdy9TxQGCA&_nc_ss=7b2a8&oh=00_AQOch0GO1ZgnMWSGwfTikjnlBc-xEi1yji9pFh49z6za6w&oe=6AC477F5);
@@ -200,17 +206,98 @@ header .img{
     align-items: center;
     justify-content: center;
  }
- .video .run i{
-    background-color: #ffffff;
+ .video .info{
+   width: 60%;
+   height: 100%;
+ }
+ .arrow{
+   background-color: #ffffff;
     color: #00849e;
-    width: 50px;
-    height: 50px;
-    border-radius: 100px;
+    width: 40%;
+    height: 100%;
+    border-radius: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 35px;
     padding-top: 1px;
+
+   background-image: url(https://cdn-icons-gif.flaticon.com/19009/19009699.gif);
+   background-position: center;
+   background-size: 50%;
+   background-repeat: no-repeat;
+ }
+ .rood{
+   width: 60%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+    width: 100%;
+    height: 280px;
+    border: #d4000081 solid 2px;
+    border-radius: 40px;
+    background-color: #ffffff;
+    position: relative;
+ }
+ .rood .r{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   align-items: start;
+   justify-content: center;
+   flex-direction: column;
+   gap: 20px;
+   padding-left: 30px;
+   padding-right:30px;
+ }
+ .r .case{
+   width: 100%;
+   height: 22px;
+   line-height: 22px;
+   overflow: hidden;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+ }
+ .r .time{
+   overflow: hidden;
+ }
+ .r .arrow{
+   width: 30px;
+   height: 30px;
+   border-radius: 100px;
+   /* background-color: #007f8d; */
+   background-size: cover;
+ }
+ .rood .doots{
+   width: 50px;
+   height: 100%;
+   /* background-color: #ffffff; */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+ }
+ .doots .doot{
+   width: 100%;
+   height: 22px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+ .doot .ball{
+   width: 22px;
+   height: 22px;
+   background-color: #007f8d;
+   border-radius: 20px;
+ }
+ .doots .hr{
+   height: 20px;
+   width: 5px;
+   border: none;
+   background-color: rgb(82, 3, 3);
  }
  .dev{
     width: 100%;
