@@ -135,7 +135,7 @@ header .img{
 }
  .back{
     margin-top: 10vh;
-    margin-bottom: 10vh;
+    margin-bottom: 40px;
     border-left: #d40000 solid 4px;
     padding-left: 5px;
  }
@@ -147,6 +147,68 @@ header .img{
  .back h2 span{
     color: #680000c8;
     font-weight: bold;
+ }
+ .files{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    /* background-color: #000; */
+    margin-bottom: 30px;
+    margin-top: 30px;
+ }
+ .files h2{
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+ }
+ .files h2 i{
+    font-size: 30px;
+    color: #005a57;
+ }
+ .files .file{
+    width: 100%;
+    height: 55px;
+    background-color: #defcffa3;
+    border-radius: 15px;
+    border: #006b70 solid 2px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0px 0px 10px;
+ }
+ .files .file h3{
+    background-color: white;
+    padding: 0px 20px 0px 20px;
+    border-radius: 50px;
+        box-shadow: #0000006c 2px 2px 5px 0px;
+
+ }
+ .files span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    height: 100%;
+    width: 120px;
+    /* background-color: #000; */
+ }
+ .files .file i{
+    width: 40px;
+    height: 40px;
+    /* background-color: #ffffff; */
+    border-radius: 10px;
+    /* color: #006b70; */
+    color: #00575c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: #0000006c 2px 2px 5px 0px;
  }
  .video{
     width: 100%;
