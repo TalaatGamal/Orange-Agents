@@ -75,6 +75,8 @@ casesIcon1.addEventListener("click", () => {
     setTimeout(() => {
         back_c.style.display="flex"
         front_c.style.display="none"
+        card.style.height="350px"
+        back_c.style.height="350px"
     }, 100);
 });
 
@@ -84,7 +86,7 @@ casesIcon1.addEventListener("click", () => {
 const card2 = document.getElementById("v-2");
 const casesIcon2 = document.getElementById("cases-icon2");
 const back_c2 = document.getElementById("back-c2");
-const front_2 = document.getElementById("front-c2");
+const front_c2 = document.getElementById("front-c2");
 
 
 casesIcon2.addEventListener("click", () => {
@@ -93,6 +95,8 @@ casesIcon2.addEventListener("click", () => {
     setTimeout(() => {
         back_c2.style.display="flex"
         front_c2.style.display="none"
+        card2.style.height="350px"
+        back_c2.style.height="350px"
     }, 100);
 });
 
@@ -111,6 +115,8 @@ home.addEventListener("click", (e) => {
 
         back_c.style.display = "none";
         front_c.style.display = "flex";
+        card.style.height="280px"
+        back_c.style.height="280px"
     }
 
     if (back_c2.style.display === "flex") {
@@ -119,7 +125,9 @@ home.addEventListener("click", (e) => {
         card2.style.borderColor = "";
 
         back_c2.style.display = "none";
-        front_2.style.display = "flex";
+        front_c2.style.display = "flex";
+        card2.style.height="280px"
+        back_c.style.height="280px"
     }
 
 });
