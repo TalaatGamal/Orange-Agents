@@ -161,14 +161,14 @@ header .img{
     background-image: url(https://scontent.fcai19-12.fna.fbcdn.net/v/t39.30808-6/531593324_700817079625299_4419968111286588574_n.jpg?stp=dst-jpg_tt6&cstp=mx1600x872&ctp=s1600x872&_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=2DU96TKZwCUQ7kNvwHavnHh&_nc_oc=AdolheoFkfd3O-1OjSbOHZvgYyVt1jtWlbtouv7SyJ7kQGvowt5RFYoQY7pi-_XCaV8&_nc_zt=23&_nc_ht=scontent.fcai19-12.fna&_nc_gid=3ITfJXDxL-0bvdy9TxQGCA&_nc_ss=7b2a8&oh=00_AQOch0GO1ZgnMWSGwfTikjnlBc-xEi1yji9pFh49z6za6w&oe=6AC477F5);
     background-position: center;
     background-size: cover;
+    overflow: hidden;
 
  }
 
- #v-1 {
+#v-1 {
     position: relative;
     transition: 0.4s;
 }
-
 #v-1.flipped {
     transform: rotateY(180deg);
 }
@@ -194,6 +194,41 @@ header .img{
 }
 
 #v-1 .back-c {
+    transform: rotateY(180deg);
+}
+
+
+
+
+#v-2 {
+    position: relative;
+    transition: 0.4s;
+}
+#v-2.flipped {
+    transform: rotateY(180deg);
+}
+
+#v-2 .front-c2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 280px;
+}
+#v-2 .back-c2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 280px;
+    display: none;
+}
+
+#v-2 .front-c2 {
+    transform: rotateY(0deg);
+}
+
+#v-2 .back-c2 {
     transform: rotateY(180deg);
 }
 
@@ -252,13 +287,13 @@ header .img{
  .global{
    background-color: #94a09c;
    width: 100%;
-   min-height: 50px;
+   min-height: 55px;
    display: flex;
    align-items: center;
    justify-content: space-between;
    border-radius: 0px 0px 30px 0px;
    color: #fafafa;
-   padding: 0px 20px 0px 20px;
+   padding: 0px 8.5px 0px 20px;
  }
  .global span{
    color: #003747;
