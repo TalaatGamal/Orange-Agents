@@ -158,7 +158,7 @@ header .img{
     /* background-color: #000; */
     margin-bottom: 40px;
     margin-top: 30px;
-    padding: 10px 10px 10px 10px;
+    padding: 5px;
  }
  .title{
     font-size: 30px;
@@ -183,7 +183,7 @@ header .img{
     align-items: center;
     justify-content: space-between;
     padding: 0px 0px 0px 10px;
-            box-shadow: #0000006c 2px 2px 5px 0px;
+    box-shadow: #00000038 2px 2px 5px 0px;
 
  }
  .files .file h3{
