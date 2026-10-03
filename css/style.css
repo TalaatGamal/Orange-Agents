@@ -167,6 +167,7 @@ header .img{
     justify-content: left;
     gap: 10px;
     width: 100%;
+    height: 70px;
  }
  .title i{
     font-size: 30px;
@@ -474,16 +475,26 @@ header .img{
     gap: 10px;
     margin-bottom: 30px;
  }
+ .gallery .title .img{
+    width: 55px;
+    height: 50px;
+    background-image: url(https://cdn-icons-gif.flaticon.com/19005/19005418.gif);
+    background-position: 50% 40%;
+    background-size: 110%;
+    position: relative;
+    bottom: 10px;
+ }
  .gallery .images{
     width: 100%;
     height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* border: #006a702e solid 2px; */
-    background-color: #006a701e;
+    border: #006a7000 solid 5px;
+    border-right: #006a703c double 5px;
+    border-left: #006a703c double 5px;
+    background-color: #006a700b;
     border-radius: 30px;
-    font-size: 30px;
  }
  .gallery .sleep{
     background-image: url(https://cdn-icons-gif.flaticon.com/17091/17091918.gif);
