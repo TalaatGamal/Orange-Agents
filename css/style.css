@@ -158,6 +158,7 @@ header .img{
     /* background-color: #000; */
     margin-bottom: 40px;
     margin-top: 30px;
+    padding: 10px 10px 10px 10px;
  }
  .title{
     font-size: 30px;
@@ -174,7 +175,7 @@ header .img{
  .files .file{
     width: 100%;
     height: 55px;
-    background-color: #defcff7c;
+    /* background-color: #defcff7c; */
     border-radius: 15px;
     /* border: #006b70 solid 2px; */
 
@@ -182,12 +183,14 @@ header .img{
     align-items: center;
     justify-content: space-between;
     padding: 0px 0px 0px 10px;
+            box-shadow: #0000006c 2px 2px 5px 0px;
+
  }
  .files .file h3{
     background-color: white;
     padding: 0px 20px 0px 20px;
     border-radius: 50px;
-        box-shadow: #0000006c 2px 2px 5px 0px;
+        /* box-shadow: #0000006c 2px 2px 5px 0px; */
 
  }
  .files span{
@@ -209,7 +212,7 @@ header .img{
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: #0000006c 2px 2px 5px 0px;
+    /* box-shadow: #0000006c 2px 2px 5px 0px; */
  }
  .video{
     width: 100%;
@@ -477,7 +480,7 @@ header .img{
     display: flex;
     align-items: center;
     justify-content: center;
-    border: #006a702e solid 2px;
+    /* border: #006a702e solid 2px; */
     background-color: #006a701e;
     border-radius: 30px;
     font-size: 30px;
