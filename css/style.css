@@ -174,9 +174,9 @@ header .img{
  .files .file{
     width: 100%;
     height: 55px;
-    background-color: #defcffa3;
+    background-color: #defcff7c;
     border-radius: 15px;
-    border: #006b70 solid 2px;
+    /* border: #006b70 solid 2px; */
 
     display: flex;
     align-items: center;
