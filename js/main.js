@@ -216,3 +216,49 @@ downloadFile_2.addEventListener("click", () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let left_animation = document.getElementById("left-animation")
+let left_animation2 = document.getElementById("left-animation2")
+let left_animation3 = document.getElementById("left-animation3")
+let right_animation = document.getElementById("right-animation")
+
+document.addEventListener("DOMContentLoaded" , () => {
+    left_animation.style.right="0px"
+    left_animation2.style.right="0px"
+    left_animation3.style.right="0px"
+    right_animation.style.left="0px"
+    setTimeout(() => {
+        left_animation.style.opacity="1"
+        left_animation2.style.opacity="1"
+        left_animation3.style.opacity="1"
+        right_animation.style.opacity="1"
+    }, 100);
+})

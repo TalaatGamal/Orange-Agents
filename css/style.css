@@ -47,6 +47,11 @@ a{
     text-decoration: none;
     color: #000;
 }
+header a{
+    font-size: 20px;
+    font-weight: 600;
+    color: #3b3a3a;
+}
 header .img{
     width: 50px;
     height: 50px;
@@ -110,6 +115,11 @@ header .img{
     border-radius: 50px;
     padding: 4px 10px 0px 15px;
     width: 100%;
+
+    position: relative;
+    left: 100vw;
+    transition: 1s;
+    opacity: 0;
 }
 .hello h1{
     font-size: 30px;
@@ -132,12 +142,21 @@ header .img{
     justify-content: start;
     flex-wrap: wrap;
     overflow: hidden;
+    position: relative;
+    right: 100vw;
+    transition: 0.5s;
+    opacity: 0;
 }
  .back{
     margin-top: 10vh;
     margin-bottom: 40px;
     border-left: #d40000 solid 4px;
     padding-left: 5px;
+
+    position: relative;
+    right: 100vw;
+    transition: 0.7s;
+    opacity: 0;
  }
  .back h2{
     overflow: hidden;
@@ -159,6 +178,11 @@ header .img{
     margin-bottom: 40px;
     margin-top: 30px;
     padding: 5px;
+
+    position: relative;
+    right: 100vw;
+    transition: 0.9s;
+    opacity: 0;
  }
  .title{
     font-size: 30px;
@@ -583,6 +607,31 @@ header .img{
   font-size: 16px;
   color: #000000;
  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
