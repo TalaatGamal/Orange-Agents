@@ -1,37 +1,72 @@
-// const username = document.getElementById("username");
-// const user = document.getElementById("user");
-// const btn = document.getElementById("btn");
-// const intro = document.getElementById("intro");
 
-// btn.addEventListener("click", () => {
-
-//     setTimeout(() => {
-//         username.blur();
-
-//         intro.style.right = "-100vw";
-
-//         setTimeout(() => {
-//             intro.style.display = "none";
-//         }, 1000);
-
-//     }, 100);
-// });
-
-// username.addEventListener("input", () => {
-
-//     // English letters + numbers + underscore فقط
-//     username.value = username.value.replace(/[^a-zA-Z0-9_]/g, "");
-
-//     user.textContent = username.value;
-
-// });
+const username = document.getElementById("username");
+const user = document.getElementById("user");
+const btn = document.getElementById("btn");
+const intro = document.getElementById("intro");
 
 
 
 
+btn.addEventListener("click", () => {
+
+    // ممنوع الدخول لو الاسم فاضي
+    if (username.value.trim() === "") {
+        return;
+    }
+    
+
+    setTimeout(() => {
+        username.blur();
+        intro.style.right = "-100vw";
+        setTimeout(() => {
+            intro.style.display = "none";
+        }, 1000);
+
+    }, 100);
+});
+
+username.addEventListener("input", () => {
+
+    // English letters + numbers + underscore فقط
+    username.value = username.value.replace(/[^a-zA-Z0-9_]/g, "");
+
+    user.textContent = username.value;
+});
 
 
 
+
+
+let left_animation = document.getElementById("left-animation");
+let left_animation2 = document.getElementById("left-animation2");
+let left_animation3 = document.getElementById("left-animation3");
+let right_animation = document.getElementById("right-animation");
+
+btn.addEventListener("click", () => {
+
+    // ممنوع تشغيل الأنيميشن لو الاسم فاضي
+    if (username.value.trim() === "") {
+        return;
+    }
+
+    setTimeout(() => {
+
+        left_animation.style.right = "0px";
+        left_animation2.style.right = "0px";
+        left_animation3.style.right = "0px";
+        right_animation.style.left = "0px";
+
+        setTimeout(() => {
+
+            left_animation.style.opacity = "1";
+            left_animation2.style.opacity = "1";
+            left_animation3.style.opacity = "1";
+            right_animation.style.opacity = "1";
+
+        }, 100);
+
+    }, 200);
+});
 
 
 
@@ -101,43 +136,33 @@ casesIcon2.addEventListener("click", () => {
 });
 
 
+document.addEventListener("click", (e) => {
 
-
-
-home.addEventListener("click", (e) => {
-
-    if (e.target !== home) return;
+    // لو الضغط جوه أي كارد، متقفلش
+    if (card.contains(e.target) || card2.contains(e.target)) {
+        return;
+    }
 
     if (back_c.style.display === "flex") {
 
         card.classList.remove("flipped");
         card.style.borderColor = "";
-
         back_c.style.display = "none";
         front_c.style.display = "flex";
-        card.style.height="280px"
-        back_c.style.height="280px"
+        card.style.height = "280px";
+        back_c.style.height = "280px";
     }
 
     if (back_c2.style.display === "flex") {
 
         card2.classList.remove("flipped");
         card2.style.borderColor = "";
-
         back_c2.style.display = "none";
         front_c2.style.display = "flex";
-        card2.style.height="280px"
-        back_c.style.height="280px"
+        card2.style.height = "280px";
+        back_c2.style.height = "280px";
     }
-
 });
-
-
-
-
-
-
-
 
 
 
@@ -245,20 +270,20 @@ downloadFile_2.addEventListener("click", () => {
 
 
 
-let left_animation = document.getElementById("left-animation")
-let left_animation2 = document.getElementById("left-animation2")
-let left_animation3 = document.getElementById("left-animation3")
-let right_animation = document.getElementById("right-animation")
+// let left_animation = document.getElementById("left-animation")
+// let left_animation2 = document.getElementById("left-animation2")
+// let left_animation3 = document.getElementById("left-animation3")
+// let right_animation = document.getElementById("right-animation")
 
-document.addEventListener("DOMContentLoaded" , () => {
-    left_animation.style.right="0px"
-    left_animation2.style.right="0px"
-    left_animation3.style.right="0px"
-    right_animation.style.left="0px"
-    setTimeout(() => {
-        left_animation.style.opacity="1"
-        left_animation2.style.opacity="1"
-        left_animation3.style.opacity="1"
-        right_animation.style.opacity="1"
-    }, 100);
-})
+// document.addEventListener("DOMContentLoaded" , () => {
+//     left_animation.style.right="0px"
+//     left_animation2.style.right="0px"
+//     left_animation3.style.right="0px"
+//     right_animation.style.left="0px"
+//     setTimeout(() => {
+//         left_animation.style.opacity="1"
+//         left_animation2.style.opacity="1"
+//         left_animation3.style.opacity="1"
+//         right_animation.style.opacity="1"
+//     }, 100);
+// })
