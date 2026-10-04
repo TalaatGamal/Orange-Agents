@@ -163,39 +163,54 @@ home.addEventListener("click", (e) => {
 
 
 
-
-
 const openFile_1 = document.getElementById("open-file-1");
+
 const downloadFile_1 = document.getElementById("download-file-1");
+
 // --------------------------------------------------------------------
+
 openFile_1.addEventListener("click", () => {
-    window.open("../sources/Material - Physical WF after the update 11.pdf");
+
+    window.open("./sources/Material - Physical WF after the update 11.pdf");
+
 });
+
 downloadFile_1.addEventListener("click", () => {
+
     const link = document.createElement("a");
-    link.href = "../sources/Material - Physical WF after the update 11.pdf";
+
+    link.href = "./sources/Material - Physical WF after the update 11.pdf";
+
     link.download = "Session-1.pdf";
+
     link.click();
+
 });
 
-
-
-
-const openFile_2 = document.getElementById("open-file-2");
-const downloadFile_2 = document.getElementById("download-file-2");
 
 // -------------------------------------------------------------------
+
+const openFile_2 = document.getElementById("open-file-2");
+
+const downloadFile_2 = document.getElementById("download-file-2");
+
 openFile_2.addEventListener("click", () => {
-    window.open("../sources/Network WF.pdf");
+
+    window.open("./sources/Network WF.pdf");
+
 });
+
 downloadFile_2.addEventListener("click", () => {
+
     const link = document.createElement("a");
-    link.href = "../sources/Network WF.pdf";
+
+    link.href = "./sources/Network WF.pdf";
+
     link.download = "Session-2.pdf";
+
     link.click();
+
 });
-
-
 
 
 
