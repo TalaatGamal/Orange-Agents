@@ -4,8 +4,44 @@ const user = document.getElementById("user");
 const btn = document.getElementById("btn");
 const intro = document.getElementById("intro");
 
+let left_animation = document.getElementById("left-animation");
+let left_animation2 = document.getElementById("left-animation2");
+let left_animation3 = document.getElementById("left-animation3");
+let right_animation = document.getElementById("right-animation");
 
 
+// ==========================================
+// التحقق من الاسم المحفوظ
+// ==========================================
+
+const savedUsername = localStorage.getItem("username");
+
+if (savedUsername) {
+
+    // الاسم موجود → لا تظهر الـ intro
+    intro.style.display = "none";
+
+    user.textContent = savedUsername;
+
+    // تشغيل الأنيميشن مباشرة
+    left_animation.style.right = "0px";
+    left_animation2.style.right = "0px";
+    left_animation3.style.right = "0px";
+    right_animation.style.left = "0px";
+
+    setTimeout(() => {
+        left_animation.style.opacity = "1";
+        left_animation2.style.opacity = "1";
+        left_animation3.style.opacity = "1";
+        right_animation.style.opacity = "1";
+    }, 100);
+
+}
+
+
+// ==========================================
+// زر الدخول
+// ==========================================
 
 btn.addEventListener("click", () => {
 
@@ -13,42 +49,23 @@ btn.addEventListener("click", () => {
     if (username.value.trim() === "") {
         return;
     }
-    
+
+    // تخزين الاسم
+    localStorage.setItem("username", username.value);
 
     setTimeout(() => {
+
         username.blur();
         intro.style.right = "-100vw";
+
         setTimeout(() => {
             intro.style.display = "none";
         }, 1000);
 
     }, 100);
-});
-
-username.addEventListener("input", () => {
-
-    // English letters + numbers + underscore فقط
-    username.value = username.value.replace(/[^a-zA-Z0-9_]/g, "");
-
-    user.textContent = username.value;
-});
 
 
-
-
-
-let left_animation = document.getElementById("left-animation");
-let left_animation2 = document.getElementById("left-animation2");
-let left_animation3 = document.getElementById("left-animation3");
-let right_animation = document.getElementById("right-animation");
-
-btn.addEventListener("click", () => {
-
-    // ممنوع تشغيل الأنيميشن لو الاسم فاضي
-    if (username.value.trim() === "") {
-        return;
-    }
-
+    // تشغيل الأنيميشن
     setTimeout(() => {
 
         left_animation.style.right = "0px";
@@ -66,18 +83,22 @@ btn.addEventListener("click", () => {
         }, 100);
 
     }, 200);
+
 });
 
 
+// ==========================================
+// كتابة الاسم
+// ==========================================
 
+username.addEventListener("input", () => {
 
+    // English letters + numbers + underscore فقط
+    username.value = username.value.replace(/[^a-zA-Z0-9_]/g, "");
 
+    user.textContent = username.value;
 
-
-
-
-
-
+});
 
 
 
