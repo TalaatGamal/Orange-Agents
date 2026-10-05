@@ -291,6 +291,18 @@ downloadFile_2.addEventListener("click", () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 // let left_animation = document.getElementById("left-animation")
 // let left_animation2 = document.getElementById("left-animation2")
 // let left_animation3 = document.getElementById("left-animation3")
@@ -308,3 +320,72 @@ downloadFile_2.addEventListener("click", () => {
 //         right_animation.style.opacity="1"
 //     }, 100);
 // })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const cases = document.querySelectorAll(".video-1 .case");
+
+cases.forEach(item => {
+    item.addEventListener("click", () => {
+
+        const time = item.dataset.time;
+
+        window.location.href = `../html/session1.html?time=${time}`;
+
+    });
+});
+
+
+const cases2 = document.querySelectorAll(".video-2 .case");
+
+cases2.forEach(item2 => {
+    item2.addEventListener("click", () => {
+
+        const time2 = item2.dataset.time2;
+
+        window.location.href = `../html/session2.html?time=${time2}`;
+
+    });
+});

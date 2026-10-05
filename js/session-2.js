@@ -3,10 +3,18 @@
 
         let player;
 
+
+          const params = new URLSearchParams(window.location.search);
+
+        const startTime = Number(params.get("time")) || 0;
+
+
+        
         // تحميل YouTube API
         const tag = document.createElement("script");
 
         tag.src = "https://www.youtube.com/iframe_api";
+
 
         const firstScriptTag =
             document.getElementsByTagName("script")[0];
@@ -22,7 +30,7 @@
 
             player = new YT.Player("player", {
 
-                videoId: "2QAEqimhbfA",
+                videoId: "sy5y51mDZOw",
 
                 playerVars: {
                     playsinline: 1,
