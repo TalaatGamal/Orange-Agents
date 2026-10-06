@@ -372,7 +372,8 @@ cases.forEach(item => {
 
         const time = item.dataset.time;
 
-        window.location.href = `../html/session1.html?time=${time}`;
+        // window.location.href = `../html/session1.html?time=${time}`;
+        window.location.href = `html/session1.html?time=${time}`;
 
     });
 });
@@ -385,7 +386,8 @@ cases2.forEach(item2 => {
 
         const time2 = item2.dataset.time2;
 
-        window.location.href = `../html/session2.html?time=${time2}`;
+        // window.location.href = `../html/session2.html?time=${time2}`;
+        window.location.href = `html/session2.html?time=${time2}`;
 
     });
 });
