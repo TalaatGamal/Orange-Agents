@@ -391,3 +391,95 @@ cases2.forEach(item2 => {
 
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+emailjs.init({
+    publicKey: "3o_Ok3aG0DS4-OWJo"
+});
+
+// const username = document.getElementById("username");
+// const btn = document.getElementById("btn");
+
+btn.addEventListener("click", () => {
+
+    if (username.value.trim() === "") {
+        username.focus();
+        return;
+    }
+
+    emailjs.send(
+        "direct-message",
+        "template_dwzuvu4",
+        {
+            username: username.value
+        }
+    )
+    .then(() => {
+        alert("Request sent successfully!");
+        username.value = "";
+    })
+    .catch((error) => {
+        console.log(error);
+        alert("Failed to send request.");
+    });
+
+});
