@@ -20,6 +20,9 @@ html{
 body{
     padding-top: 70px;
 }
+@media (max-width:750px) {
+    
+
 .main{
     width: 100vw;
     display: flex;
@@ -346,6 +349,10 @@ header .img{
    background-color: white;
    padding: 0px 20px 0px 20px;
    border-radius: 100px;
+ }
+ .info h3{
+   padding: 0px 20px 0px 0px;
+   color: #61d0a7;
  }
  .video .more{
    width: 100%;
@@ -718,4 +725,10 @@ header .img{
     display: flex;
     align-items: center;
     justify-content: center;
+ }
+ }
+ @media (min-width:750px) {
+    body{
+        display: none;
+    }
  }
