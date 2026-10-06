@@ -17,7 +17,9 @@ firstScriptTag.parentNode.insertBefore(
 
 // إنشاء الفيديو
 function onYouTubeIframeAPIReady() {
+
     player = new YT.Player("player", {
+
         videoId: "v-62StMfhXY",
 
         playerVars: {
@@ -34,11 +36,15 @@ function onYouTubeIframeAPIReady() {
 // لما الفيديو يبقى جاهز
 function onPlayerReady(event) {
 
+    // لو جاي من الصفحة الرئيسية بوقت معين
     if (startTime > 0) {
         event.target.seekTo(startTime, true);
     }
 
+    // تشغيل الفيديو تلقائياً
+    event.target.playVideo();
 }
+
 
 // أزرار الـ timestamps
 const buttons =
@@ -52,6 +58,7 @@ buttons.forEach(button => {
             Number(button.dataset.time);
 
         player.seekTo(time, true);
+        player.playVideo();
 
     });
 
