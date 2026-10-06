@@ -384,7 +384,7 @@ const cases2 = document.querySelectorAll(".video-2 .case");
 cases2.forEach(item2 => {
     item2.addEventListener("click", () => {
 
-        const time2 = item2.dataset.time2;
+        const time2 = item2.dataset.time;
 
         // window.location.href = `../html/session2.html?time=${time2}`;
         window.location.href = `html/session2.html?time=${time2}`;
