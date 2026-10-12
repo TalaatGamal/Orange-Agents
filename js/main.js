@@ -14,16 +14,45 @@ let right_animation = document.getElementById("right-animation");
 // التحقق من الاسم المحفوظ
 // ==========================================
 
+// const savedUsername = localStorage.getItem("username");
+// if (savedUsername) {
+
+//     document.documentElement.style.overflowY = "auto";
+//     // الاسم موجود → لا تظهر الـ intro
+//     intro.style.display = "none";
+
+//     user.textContent = savedUsername;
+
+//     // تشغيل الأنيميشن مباشرة
+//     left_animation.style.right = "0px";
+//     left_animation2.style.right = "0px";
+//     left_animation3.style.right = "0px";
+//     right_animation.style.left = "0px";
+
+//     setTimeout(() => {
+//         left_animation.style.opacity = "1";
+//         left_animation2.style.opacity = "1";
+//         left_animation3.style.opacity = "1";
+//         right_animation.style.opacity = "1";
+//     }, 100);
+
+// }
+
+
 const savedUsername = localStorage.getItem("username");
+const lastLogin = localStorage.getItem("lastLogin");
 
-if (savedUsername) {
-
-    // الاسم موجود → لا تظهر الـ intro
+// التحقق من الاسم ومرور 15 دقيقة
+if (
+    savedUsername &&
+    lastLogin &&
+    Date.now() - Number(lastLogin) < 15 * 60 * 1000
+) {
+    document.documentElement.style.overflowY = "auto";
     intro.style.display = "none";
-
     user.textContent = savedUsername;
 
-    // تشغيل الأنيميشن مباشرة
+    // تشغيل الأنيميشن
     left_animation.style.right = "0px";
     left_animation2.style.right = "0px";
     left_animation3.style.right = "0px";
@@ -36,7 +65,72 @@ if (savedUsername) {
         right_animation.style.opacity = "1";
     }, 100);
 
+} else {
+    // مسح البيانات لو مر 15 دقيقة أو مفيش بيانات
+    localStorage.removeItem("username");
+    localStorage.removeItem("lastLogin");
+
+    intro.style.display = "block";
+    document.documentElement.style.overflowY = "hidden";
 }
+
+// تسجيل الدخول عند الضغط على Request
+btn.addEventListener("click", () => {
+    const name = username.value.trim();
+
+    // التأكد إن الاسم مش فاضي
+    if (!name) {
+        username.focus();
+        return;
+    }
+
+    // السماح بالحروف الإنجليزية والأرقام والشرطة السفلية فقط
+    if (!/^[a-zA-Z0-9_]+$/.test(name)) {
+        alert("Please use English letters, numbers, and underscores only.");
+        username.focus();
+        return;
+    }
+
+    // حفظ الاسم ووقت الدخول
+    localStorage.setItem("username", name);
+    localStorage.setItem("lastLogin", Date.now());
+
+    user.textContent = name;
+
+    // إخفاء صفحة البداية
+    intro.style.display = "none";
+    document.documentElement.style.overflowY = "auto";
+
+    // تشغيل الأنيميشن
+    left_animation.style.right = "0px";
+    left_animation2.style.right = "0px";
+    left_animation3.style.right = "0px";
+    right_animation.style.left = "0px";
+
+    setTimeout(() => {
+        left_animation.style.opacity = "1";
+        left_animation2.style.opacity = "1";
+        left_animation3.style.opacity = "1";
+        right_animation.style.opacity = "1";
+    }, 100);
+});
+
+
+
+window.onload(function () {
+     left_animation.style.right = "0px";
+    left_animation2.style.right = "0px";
+    left_animation3.style.right = "0px";
+    right_animation.style.left = "0px";
+
+    setTimeout(() => {
+        left_animation.style.opacity = "1";
+        left_animation2.style.opacity = "1";
+        left_animation3.style.opacity = "1";
+        right_animation.style.opacity = "1";
+    }, 100);
+
+})
 
 
 // ==========================================
