@@ -117,8 +117,8 @@ btn.addEventListener("click", () => {
 
 
 
-window.onload(function () {
-     left_animation.style.right = "0px";
+window.onload = function () {
+    left_animation.style.right = "0px";
     left_animation2.style.right = "0px";
     left_animation3.style.right = "0px";
     right_animation.style.left = "0px";
@@ -129,8 +129,7 @@ window.onload(function () {
         left_animation3.style.opacity = "1";
         right_animation.style.opacity = "1";
     }, 100);
-
-})
+};
 
 
 // ==========================================
