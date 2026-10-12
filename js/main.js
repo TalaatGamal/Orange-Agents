@@ -1,37 +1,32 @@
 
+
+
+
+
+
+
+
+
 const username = document.getElementById("username");
 const user = document.getElementById("user");
 const btn = document.getElementById("btn");
 const intro = document.getElementById("intro");
 
-let left_animation = document.getElementById("left-animation");
-let left_animation2 = document.getElementById("left-animation2");
-let left_animation3 = document.getElementById("left-animation3");
-let right_animation = document.getElementById("right-animation");
-
+const left_animation = document.getElementById("left-animation");
+const left_animation2 = document.getElementById("left-animation2");
+const left_animation3 = document.getElementById("left-animation3");
+const right_animation = document.getElementById("right-animation");
 
 // ==========================================
-// التحقق من الاسم المحفوظ
+// تشغيل الأنيميشن
 // ==========================================
 
-const savedUsername = localStorage.getItem("username");
-const lastLogin = localStorage.getItem("lastLogin");
-
-// التحقق من الاسم ومرور 15 دقيقة
-if (
-    savedUsername &&
-    lastLogin &&
-    Date.now() - Number(lastLogin) < 15 * 60 * 1000
-) {
-    document.documentElement.style.overflowY = "auto";
-    intro.style.display = "none";
-    user.textContent = savedUsername;
-
-    // تشغيل الأنيميشن
+function startAnimation() {
     left_animation.style.right = "0px";
     left_animation2.style.right = "0px";
     left_animation3.style.right = "0px";
     right_animation.style.left = "0px";
+    intro.style.right="-100vw"
 
     setTimeout(() => {
         left_animation.style.opacity = "1";
@@ -39,21 +34,51 @@ if (
         left_animation3.style.opacity = "1";
         right_animation.style.opacity = "1";
     }, 100);
+}
+
+// ==========================================
+// التحقق من الاسم ومدة 15 دقيقة
+// ==========================================
+
+const savedUsername = localStorage.getItem("username");
+const lastLogin = Number(localStorage.getItem("lastLogin"));
+
+if (
+    savedUsername &&
+    lastLogin &&
+    Date.now() - lastLogin < 15 * 60 * 1000
+) {
+    // الاسم محفوظ والمدة لم تنتهِ
+    intro.style.display = "none";
+    document.documentElement.style.overflowY = "auto";
+
+    user.textContent = savedUsername;
 
 } else {
-    // مسح البيانات لو مر 15 دقيقة أو مفيش بيانات
+    // لا يوجد اسم أو انتهت مدة الجلسة
     localStorage.removeItem("username");
     localStorage.removeItem("lastLogin");
 
     intro.style.display = "block";
+    intro.style.right = "0";
+
     document.documentElement.style.overflowY = "hidden";
 }
 
-// تسجيل الدخول عند الضغط على Request
+// ==========================================
+// تشغيل الأنيميشن عند فتح الصفحة أو تحديثها
+// ==========================================
+
+startAnimation();
+
+// ==========================================
+// زر الدخول Request
+// ==========================================
+
 btn.addEventListener("click", () => {
     const name = username.value.trim();
 
-    // التأكد إن الاسم مش فاضي
+    // التأكد من كتابة الاسم
     if (!name) {
         username.focus();
         return;
@@ -66,107 +91,64 @@ btn.addEventListener("click", () => {
         return;
     }
 
-    // حفظ الاسم ووقت الدخول
+    // حفظ الاسم ووقت تسجيل الدخول
     localStorage.setItem("username", name);
-    localStorage.setItem("lastLogin", Date.now());
+    localStorage.setItem("lastLogin", Date.now().toString());
+    intro.style.right="-100vw"
 
     user.textContent = name;
 
-    // إخفاء صفحة البداية
-    intro.style.display = "none";
-    document.documentElement.style.overflowY = "auto";
-
-    // تشغيل الأنيميشن
-    left_animation.style.right = "0px";
-    left_animation2.style.right = "0px";
-    left_animation3.style.right = "0px";
-    right_animation.style.left = "0px";
+    // إخفاء لوحة البداية
+    username.blur();
 
     setTimeout(() => {
-        left_animation.style.opacity = "1";
-        left_animation2.style.opacity = "1";
-        left_animation3.style.opacity = "1";
-        right_animation.style.opacity = "1";
-    }, 100);
-});
-
-
-
-window.onload = function () {
-    left_animation.style.right = "0px";
-    left_animation2.style.right = "0px";
-    left_animation3.style.right = "0px";
-    right_animation.style.left = "0px";
-
-    setTimeout(() => {
-        left_animation.style.opacity = "1";
-        left_animation2.style.opacity = "1";
-        left_animation3.style.opacity = "1";
-        right_animation.style.opacity = "1";
-    }, 100);
-};
-
-
-// ==========================================
-// زر الدخول
-// ==========================================
-
-btn.addEventListener("click", () => {
-
-    // ممنوع الدخول لو الاسم فاضي
-    if (username.value.trim() === "") {
-        return;
-    }
-
-    // تخزين الاسم
-    localStorage.setItem("username", username.value);
-
-    setTimeout(() => {
-
-        username.blur();
         intro.style.right = "-100vw";
-
-        setTimeout(() => {
-            intro.style.display = "none";
-        }, 1000);
-
-    }, 100);
-
-
-    // تشغيل الأنيميشن
-    setTimeout(() => {
-
-        left_animation.style.right = "0px";
-        left_animation2.style.right = "0px";
-        left_animation3.style.right = "0px";
-        right_animation.style.left = "0px";
-
-        setTimeout(() => {
-
-            left_animation.style.opacity = "1";
-            left_animation2.style.opacity = "1";
-            left_animation3.style.opacity = "1";
-            right_animation.style.opacity = "1";
-
-        }, 100);
-
-    }, 200);
-
+        intro.style.display = "none";
+        document.documentElement.style.overflowY = "auto";
+    }, 1000);
 });
 
-
 // ==========================================
-// كتابة الاسم
+// كتابة الاسم وعرضه مباشرة
 // ==========================================
 
 username.addEventListener("input", () => {
-
-    // English letters + numbers + underscore فقط
     username.value = username.value.replace(/[^a-zA-Z0-9_]/g, "");
 
     user.textContent = username.value;
-
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
