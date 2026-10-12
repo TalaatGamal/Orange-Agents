@@ -190,12 +190,7 @@ if (validLogin) {
     document.documentElement.style.overflowY = "hidden";
 }
 
-// ==========================================
-// تشغيل الأنيميشن عند فتح الصفحة أو Reload
-// ==========================================
-
 startAnimation();
-
 // ==========================================
 // زر Request
 // ==========================================
@@ -224,13 +219,11 @@ btn.addEventListener("click", () => {
 
     // إخفاء الانترو
     intro.style.right = "-100vw";
+    startAnimation();
 
     setTimeout(() => {
         intro.style.display = "none";
         document.documentElement.style.overflowY = "auto";
-
-        // إعادة تشغيل الأنيميشن بعد الانترو
-        startAnimation();
     }, 850);
 });
 
