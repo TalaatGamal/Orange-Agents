@@ -131,6 +131,7 @@ header .img{
   justify-content: left;
   margin-top: 10px;
   margin-bottom: 30px;
+  overflow: hidden;
  }
  .title h2 span{
   font-size: 45px;
