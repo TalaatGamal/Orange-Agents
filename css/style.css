@@ -675,6 +675,36 @@ header .img{
 
 
 
+#left-animation,
+#left-animation2,
+#left-animation3 {
+    left: -100vw;
+    opacity: 0;
+    transition: 0.5s ease, opacity 0.8s ease;
+}
+
+#right-animation {
+    right: -100vw;
+    opacity: 0;
+    transition: 0.5s ease, opacity 0.8s ease;
+}
+
+#left-animation.show,
+#left-animation2.show,
+#left-animation3.show {
+    left: 0;
+    opacity: 1;
+}
+
+#right-animation.show {
+    left: 0;
+    opacity: 1;
+}
+
+#intro {
+    transition: right 0.8s ease;
+}
+
 
 
 
