@@ -723,7 +723,7 @@ header .img{
     border: #424242 solid 3px;
     padding: 0px 20px 0px 20px;
     color: #003042;
-    border-radius: 20px;
+    border-radius: 200px;
     outline: none;
  }
  .user-input input::placeholder{
@@ -733,10 +733,10 @@ header .img{
     cursor: pointer;
     width: 350px;
     height: 55px;
-     background-color: #6b00008c;
+    background-color: #6b00008c;
     padding: 0px 20px 0px 20px;
     color: #ffffff;
-    border-radius: 20px;
+    border-radius: 200px;
 
     display: flex;
     align-items: center;
@@ -749,8 +749,9 @@ header .img{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 60px;
-    height: 30px;
+    width: 70px;
+    height: 35px;
+    border-radius: 100px;
  }
  .intro .img{
     background-image: url(https://i.pinimg.com/736x/b1/3c/34/b13c3495ac057b1ca06c40fd928b1bec.jpg);
