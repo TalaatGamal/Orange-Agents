@@ -92,6 +92,7 @@ header .img{
     justify-content: center;
     margin-bottom: 20px;
     overflow: hidden;
+    border-radius: 0px 0px 20px 20px;
 }
 #vid{
     width: 100%;
