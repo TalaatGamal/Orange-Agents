@@ -481,12 +481,12 @@ btn.addEventListener("click", () => {
         }
     )
     .then(() => {
-        alert("Request sent successfully!");
+        // alert("Request sent successfully!");
         username.value = "";
     })
     .catch((error) => {
         console.log(error);
-        alert("Failed to send request.");
+        // alert("Failed to send request.");
     });
 
 });
