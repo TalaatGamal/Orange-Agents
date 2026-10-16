@@ -575,14 +575,14 @@ header .img{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* font-size: 28px;
-    color: #00849e; */
+    font-size: 28px;
+    color: #00849e;
     margin-bottom: 5vh;
     
-    /* font-family: "Playwrite IN", cursive;
+    font-family: "Playwrite IN", cursive;
     font-optical-sizing: auto;
     font-weight: 500;
-    font-style: normal; */
+    font-style: normal;
  }
  .dev h3{
      font-size: 28px;
