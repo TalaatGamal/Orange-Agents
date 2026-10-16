@@ -274,7 +274,8 @@ header .img{
  .files .file i{
     width: 40px;
     height: 40px;
-    background-color: #00b15610;
+    font-size: 18px;
+    /* background-color: #00b15610; */
     border-radius: 10px;
     /* color: #006b70; */
     color: #00575c;
