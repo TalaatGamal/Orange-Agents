@@ -230,6 +230,12 @@ header .img{
     box-shadow: #00000038 2px 2px 5px 0px;
 
  }
+ .files .notes{
+    /* justify-content: center; */
+    margin-bottom: 30px;
+    color: #00160ddf;
+    font-weight: 700;
+ }
   .files .s-1{
     gap: 0px;
   }
@@ -268,7 +274,7 @@ header .img{
  .files .file i{
     width: 40px;
     height: 40px;
-    background-color: #00b1561e;
+    background-color: #00b15610;
     border-radius: 10px;
     /* color: #006b70; */
     color: #00575c;
