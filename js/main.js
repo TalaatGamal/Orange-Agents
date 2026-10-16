@@ -412,6 +412,62 @@ downloadFile_2.addEventListener("click", () => {
 
 
 
+// -------------------------------------------------------------------
+
+const openFile_3 = document.getElementById("open-file-3");
+
+const downloadFile_3 = document.getElementById("download-file-3");
+
+openFile_3.addEventListener("click", () => {
+
+    window.open("./sources/Billing.pdf");
+
+});
+
+downloadFile_3.addEventListener("click", () => {
+
+    const link = document.createElement("a");
+
+    link.href = "./sources/Billing.pdf";
+
+    link.download = "Billing.pdf";
+
+    link.click();
+
+});
+
+
+
+// -------------------------------------------------------------------
+
+const openFile_4 = document.getElementById("open-file-4");
+
+const downloadFile_4 = document.getElementById("download-file-4");
+
+openFile_4.addEventListener("click", () => {
+
+    window.open("./sources/call-scenario.pdf");
+
+});
+
+downloadFile_4.addEventListener("click", () => {
+
+    const link = document.createElement("a");
+
+    link.href = "./sources/call-scenario.pdf";
+
+    link.download = "call-scenario.pdf";
+
+    link.click();
+
+});
+
+
+
+
+
+
+
 
 
 

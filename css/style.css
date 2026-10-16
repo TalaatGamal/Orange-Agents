@@ -230,20 +230,39 @@ header .img{
     box-shadow: #00000038 2px 2px 5px 0px;
 
  }
+  .files .s-1{
+    gap: 0px;
+  }
+ .files .file .gif{
+    background-image: url(https://cdn-icons-gif.flaticon.com/18998/18998795.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+ }
+ .files .file .gif-2{
+    background-image: url(https://cdn-icons-png.flaticon.com/128/12533/12533702.png);
+    background-size: 70%;
+ }
+ .files .file .gif-3{
+    background-image: url(https://cdn-icons-png.flaticon.com/128/6953/6953015.png);
+    background-size: 70%;
+ }
+ .files .file .gif-4{
+    background-image: url(https://cdn-icons-png.flaticon.com/128/8090/8090816.png);
+    background-size: 70%;
+ }
  .files .file h3{
-    background-color: white;
-    padding: 0px 20px 0px 20px;
-    border-radius: 50px;
-        /* box-shadow: #0000006c 2px 2px 5px 0px; */
-
+    padding-left: 10px;
  }
  .files span{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
     height: 100%;
-    width: 120px;
+    min-width: 110px;
     /* background-color: #000; */
  }
  .files .file i{
