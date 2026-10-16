@@ -571,18 +571,39 @@ header .img{
  } */
  .dev{
     width: 100%;
+    height: 130px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 28px;
-    color: #00849e;
-    /* background-color: #000000; */
+    /* font-size: 28px;
+    color: #00849e; */
     margin-bottom: 5vh;
     
-    font-family: "Playwrite IN", cursive;
+    /* font-family: "Playwrite IN", cursive;
     font-optical-sizing: auto;
     font-weight: 500;
-    font-style: normal;
+    font-style: normal; */
+ }
+ .dev h3{
+     font-size: 28px;
+     color: #00849e;
+     font-family: "Playwrite IN", cursive;
+     font-optical-sizing: auto;
+     font-weight: 500;
+     font-style: normal;
+     padding-right: 7px;
+     animation: dev 8s infinite linear;
+ }
+ @keyframes dev {
+    0%{
+        transform: translateY(-30px);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(-30px);
+    }
  }
  .dev span{
     border: #00000000 solid 3.5px;
