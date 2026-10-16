@@ -238,8 +238,8 @@ header .img{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
  }
  .files .file .gif-2{
     background-image: url(https://cdn-icons-png.flaticon.com/128/12533/12533702.png);
@@ -268,7 +268,7 @@ header .img{
  .files .file i{
     width: 40px;
     height: 40px;
-    /* background-color: #ffffff; */
+    background-color: #00b1561e;
     border-radius: 10px;
     /* color: #006b70; */
     color: #00575c;
